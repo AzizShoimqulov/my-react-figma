@@ -18,7 +18,7 @@ import { IoPersonCircleSharp } from "react-icons/io5";
 const Navbar = () => {
   return (
     <nav className="w-full border-b-4 border-b-blue-900 bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1450px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
        
           <div className="flex items-center gap-8">
@@ -34,8 +34,10 @@ const Navbar = () => {
            {navIcons.map(item => (
             <button
                   key={item.id}
-                  className="text-white hover:text-yellow-400 transition-colors duration-200">
+                  className="text-white flex gap-2.5 p-[8px] rounded-[8px] bg-[#1E293B] hover:text-yellow-400 transition-colors duration-200">
                   {item.icon}
+                  {item.id === 4 && <span className="text-sm">Login</span>}
+
             </button>
             ))}
         </div>
