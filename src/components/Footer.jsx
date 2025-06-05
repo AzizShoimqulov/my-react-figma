@@ -26,11 +26,14 @@ const Footer = () => {
           <p className='text-[#94a3b8]'>Cart</p>
         </div>
         <div>
-          <h3>Account</h3>
+          <h3 className='text-white'>Account</h3>
           <p className='text-[#94a3b8]'>Login</p>
           <p className='text-[#94a3b8]'>Register</p>
           <p className='text-[#94a3b8]'>My Account</p>
-          <p className='text-[#94a3b8]'></p>
+          <p className='text-[#94a3b8]'>Order History</p>
+        </div>
+        <div>
+          
         </div>
       </div>
     </footer>
