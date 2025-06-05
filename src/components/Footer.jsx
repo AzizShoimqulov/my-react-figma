@@ -29,7 +29,7 @@ const Footer = () => {
           <h3>Account</h3>
           <p className='text-[#94a3b8]'>Login</p>
           <p className='text-[#94a3b8]'>Register</p>
-          <p className='text-[#94a3b8]'></p>
+          <p className='text-[#94a3b8]'>My Account</p>
           <p className='text-[#94a3b8]'></p>
         </div>
       </div>
