@@ -11,9 +11,9 @@ const Footer = () => {
   return (
     <footer className='bg-[#0D1526]'>
       <div className='max-w-[1450px] mx-auto px-4 sm:px-6 lg:px-8'>
-        {/* Main Footer Grid */}
+
         <div className='flex flex-col md:flex-row md:justify-between pt-11 px-2 pb-11 gap-8'>
-          {/* Store */}
+
           <div className='flex-1'>
             <h3 className='text-white font-bold text-2xl mb-3'>Store</h3>
             <p className='text-[#94a3b8] mb-3 text-[17px]'>
@@ -27,7 +27,6 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Shop */}
           <div className='flex-1'>
             <h3 className='text-white font-bold text-2xl mb-3'>Shop</h3>
             {['All Products', 'Categories', 'Wishlist', 'Cart'].map(item => (
@@ -35,7 +34,6 @@ const Footer = () => {
             ))}
           </div>
 
-          {/* Account */}
           <div className='flex-1'>
             <h3 className='text-white font-bold text-2xl mb-3'>Account</h3>
             {['Login', 'Register', 'My Account', 'Order History'].map(item => (
@@ -58,10 +56,8 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Divider */}
         <div className="w-full h-[1.4px] bg-gray-800"></div>
 
-        {/* Bottom section */}
         <div className='flex flex-col md:flex-row mt-9 pb-12 justify-between px-2 gap-4 md:gap-0'>
           <p className='text-[#94a3b8] text-center md:text-left'>
             © 2023 Store. All rights reserved.
