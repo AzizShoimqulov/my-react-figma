@@ -11,45 +11,65 @@ const Footer = () => {
   return (
     <footer className='bg-[#0D1526]'>
       <div className='max-w-[1450px] mx-auto px-4 sm:px-6 lg:px-8'>
-        <div className='flex justify-between pt-11 pr-2 pl-2 pb-11'>
-          <div>
+        {/* Main Footer Grid */}
+        <div className='flex flex-col md:flex-row md:justify-between pt-11 px-2 pb-11 gap-8'>
+          {/* Store */}
+          <div className='flex-1'>
             <h3 className='text-white font-bold text-2xl mb-3'>Store</h3>
-            <p className='text-[#94a3b8] mb-3 text-[17px]'>Your one-stop shop for all your shopping <br /> needs. Quality products, competitive <br /> prices, and exceptional service.</p>
-            <div className='text-[#94a3b8] flex mt-5 gap-2'>
-              <FaFacebookSquare size={21}/>
-              <FaInstagram size={21}/>
-              <FaTwitter size={21}/>
-              <IoLogoYoutube size={21}/>
+            <p className='text-[#94a3b8] mb-3 text-[17px]'>
+              Your one-stop shop for all your shopping <br /> needs. Quality products, competitive <br /> prices, and exceptional service.
+            </p>
+            <div className='text-[#94a3b8] flex mt-5 gap-2 cursor-pointer'>
+              <FaFacebookSquare size={21} />
+              <FaInstagram size={21} />
+              <FaTwitter size={21} />
+              <IoLogoYoutube size={21} />
             </div>
           </div>
-          <div>
+
+          {/* Shop */}
+          <div className='flex-1'>
             <h3 className='text-white font-bold text-2xl mb-3'>Shop</h3>
-            <p className='text-[#94a3b8] text-[17px]'>All Products</p>
-            <p className='text-[#94a3b8] text-[17px]'>Categories</p>
-            <p className='text-[#94a3b8] text-[17px]'>Wishlist</p>
-            <p className='text-[#94a3b8] text-[17px]'>Cart</p>
+            {['All Products', 'Categories', 'Wishlist', 'Cart'].map(item => (
+              <p key={item} className='text-[#94a3b8] text-[17px] hover:text-white cursor-pointer'>{item}</p>
+            ))}
           </div>
-          <div>
+
+          {/* Account */}
+          <div className='flex-1'>
             <h3 className='text-white font-bold text-2xl mb-3'>Account</h3>
-            <p className='text-[#94a3b8] text-[17px]'>Login</p>
-            <p className='text-[#94a3b8] text-[17px]'>Register</p>
-            <p className='text-[#94a3b8] text-[17px]'>My Account</p>
-            <p className='text-[#94a3b8] text-[17px]'>Order History</p>
+            {['Login', 'Register', 'My Account', 'Order History'].map(item => (
+              <p key={item} className='text-[#94a3b8] text-[17px] hover:text-white cursor-pointer'>{item}</p>
+            ))}
           </div>
-          <div>
+
+          {/* Contact */}
+          <div className='flex-1'>
             <h3 className='text-white font-bold text-2xl mb-3'>Contact</h3>
-            <p className='text-[#94a3b8] flex text-[17px]'><p><FaLocationDot/></p>123 Shopping Street, Retail City, 10001</p>
-            <p className='text-[#94a3b8] flex text-[17px]'>p<FiPhone/>(123) 456-7890</p>
-            <p className='text-[#94a3b8] flex text-[17px]'><CgMail/>info@store.com</p>
+            <p className='text-[#94a3b8] flex items-start gap-2 text-[17px] mb-2 hover:text-white cursor-pointer'>
+              <FaLocationDot className='mt-[6px]' /> 123 Shopping Street, Retail City, 10001
+            </p>
+            <p className='text-[#94a3b8] flex items-start gap-2 text-[17px] mb-2 hover:text-white cursor-pointer'>
+              <FiPhone className='mt-[6px]' /> (123) 456-7890
+            </p>
+            <p className='text-[#94a3b8] flex items-start gap-2 text-[17px] mb-2 hover:text-white cursor-pointer'>
+              <CgMail className='mt-[6px]' /> info@store.com
+            </p>
           </div>
         </div>
-        <div className="w-[1000px] h-[1.7px] bg-[#020817]"></div>
-        <div>
-          <p className='text-white'>© 2023 Store. All rights reserved.</p>
-          <div className='flex gap-7'>
-            <p className='text-[#94a3b8]'>Privacy Policy</p>
-            <p className='text-[#94a3b8]'>Terms of Service</p>
-            <p className='text-[#94a3b8]'>Shipping Policy</p>
+
+        {/* Divider */}
+        <div className="w-full h-[1.4px] bg-gray-800"></div>
+
+        {/* Bottom section */}
+        <div className='flex flex-col md:flex-row mt-9 pb-12 justify-between px-2 gap-4 md:gap-0'>
+          <p className='text-[#94a3b8] text-center md:text-left'>
+            © 2023 Store. All rights reserved.
+          </p>
+          <div className='flex flex-col sm:flex-row gap-2 sm:gap-7 text-center sm:text-left'>
+            <p className='text-[#94a3b8] hover:text-white cursor-pointer'>Privacy Policy</p>
+            <p className='text-[#94a3b8] hover:text-white cursor-pointer'>Terms of Service</p>
+            <p className='text-[#94a3b8] hover:text-white cursor-pointer'>Shipping Policy</p>
           </div>
         </div>
       </div>
