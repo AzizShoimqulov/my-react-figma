@@ -2,8 +2,8 @@ import React from 'react'
 
 const Search = () => {
   return (
-    <div>
-      <h1>Onlayn Store</h1>
+    <div className='bg-[#020817]'>
+      <h1 className='text-3xl font-bold text-whiteas'>Onlayn Store</h1>
       <div className="flex items-center gap-3 p-4">
         <input
           type="text"
@@ -14,7 +14,7 @@ const Search = () => {
           Search
         </button>
       </div>
-    </div> // ❗️Bu yopuvchi `div` sizning `return` blokini to‘liq tugatadi
+    </div>
   )
 }
 
