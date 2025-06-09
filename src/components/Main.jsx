@@ -1,8 +1,10 @@
-import React from 'react'
+import Search from '../pages/Search'
 
 const Main = () => {
   return (
-    <div>Main</div>
+    <>
+      <Search />
+    </>
   )
 }
 
