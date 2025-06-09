@@ -1,9 +1,12 @@
+import Card from '../pages/Card'
+import ProductGrid from '../pages/ProductGrid'
 import Search from '../pages/Search'
 
 const Main = () => {
   return (
     <>
       <Search />
+      <ProductGrid/>
     </>
   )
 }
