@@ -16,14 +16,13 @@ const Navbar = () => {
   const closeMenu = () => setIsOpen(false);
 
   return (
-    <nav className="w-full border-b border-b-gray-700 sticky top-0 shadow bg-white dark:bg-[#020817] dark:text-white text-black z-50 transition-colors duration-300">
+    <nav className="w-full border-b border-b-gray-700 bg-white dark:bg-[#020817] dark:text-white text-black relative z-50 transition-colors duration-300">
       <div className="max-w-[1450px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-        
+         
           <div className="flex items-center gap-8">
             <h1 className="text-xl font-bold cursor-pointer">Store</h1>
 
-           
             <div className="hidden md:flex gap-6">
               {navItems.map(item => (
                 <a
@@ -37,7 +36,6 @@ const Navbar = () => {
             </div>
           </div>
 
-          
           <div className="hidden md:flex items-center gap-4">
             <Darkmood />
             <button className="hover:text-yellow-400 transition-colors duration-200">
@@ -52,7 +50,6 @@ const Navbar = () => {
             </button>
           </div>
 
-        
           <div className="md:hidden">
             <button onClick={() => setIsOpen(true)}>
               <HiMenu size={25} />
@@ -61,15 +58,14 @@ const Navbar = () => {
         </div>
       </div>
 
-      
       <div className={`fixed inset-0 z-40 transition-opacity duration-300 ${isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
-       
+     
         <div
           className="absolute inset-0 bg-black/60 backdrop-blur-sm"
           onClick={closeMenu}
         />
 
-      
+       
         <div className={`absolute top-0 left-0 h-full w-[75%] max-w-xs bg-white dark:bg-[#020817] p-6 shadow-lg transform transition-transform duration-300 ease-in-out
           ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}>
           <div className="flex justify-end">

@@ -4,7 +4,7 @@ import Search from '../pages/Search'
 const Main = () => {
   return (
     <>
-      <Search />
+      <Search/>
       <ProductGrid/>
     </>
   )
