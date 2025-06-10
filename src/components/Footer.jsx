@@ -41,7 +41,6 @@ const Footer = () => {
             ))}
           </div>
 
-          {/* Contact */}
           <div className='flex-1'>
             <h3 className='text-white font-bold text-2xl mb-3'>Contact</h3>
             <p className='text-[#94a3b8] flex items-start gap-2 text-[17px] mb-2 hover:text-white cursor-pointer'>

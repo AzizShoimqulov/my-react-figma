@@ -1,13 +1,11 @@
-import ProductGrid from '../pages/ProductGrid'
-import Search from '../pages/Search'
+import ProductGrid from '../pages/ProductGrid';
 
 const Main = () => {
   return (
     <>
-      <Search/>
-      <ProductGrid/>
+      <ProductGrid />
     </>
-  )
-}
+  );
+};
 
-export default Main
+export default Main;

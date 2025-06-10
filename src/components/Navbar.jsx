@@ -3,12 +3,13 @@ import { FaRegHeart } from "react-icons/fa";
 import { FiShoppingCart } from "react-icons/fi";
 import { IoPersonCircleSharp } from "react-icons/io5";
 import { HiMenu, HiX } from "react-icons/hi";
+import { Link } from 'react-router-dom'; // <<--- MUHIM!
 import Darkmood from '../pages/Darkmood';
 
 const navItems = [
   { id: 1, name: "Home", link: "/" },
   { id: 2, name: "Products", link: "/" },
-  { id: 3, name: "Categories", link: "/" },
+  { id: 3, name: "Categories", link: "/categories" },
 ];
 
 const Navbar = () => {
@@ -16,7 +17,7 @@ const Navbar = () => {
   const closeMenu = () => setIsOpen(false);
 
   return (
-    <nav className="w-full border-b border-b-gray-700 bg-white dark:bg-[#020817] dark:text-white text-black relative z-50 transition-colors duration-300">
+    <nav className="w-full border-b border-b-gray-700 bg-white dark:bg-[#020817] dark:text-white text-black sticky top-0 z-50 transition-colors duration-300">
       <div className="max-w-[1450px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
          
@@ -25,13 +26,13 @@ const Navbar = () => {
 
             <div className="hidden md:flex gap-6">
               {navItems.map(item => (
-                <a
+                <Link
                   key={item.id}
-                  href={item.link}
+                  to={item.link}
                   className="hover:text-blue-500 dark:hover:text-blue-400 cursor-pointer transition-colors duration-200 text-[14px] font-semibold"
                 >
                   {item.name}
-                </a>
+                </Link>
               ))}
             </div>
           </div>
@@ -58,14 +59,13 @@ const Navbar = () => {
         </div>
       </div>
 
+      {/* Mobile menu */}
       <div className={`fixed inset-0 z-40 transition-opacity duration-300 ${isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
-     
         <div
           className="absolute inset-0 bg-black/60 backdrop-blur-sm"
           onClick={closeMenu}
         />
 
-       
         <div className={`absolute top-0 left-0 h-full w-[75%] max-w-xs bg-white dark:bg-[#020817] p-6 shadow-lg transform transition-transform duration-300 ease-in-out
           ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}>
           <div className="flex justify-end">
@@ -76,21 +76,18 @@ const Navbar = () => {
 
           <div className="flex flex-col gap-6 mt-4">
             {navItems.map(item => (
-              <a
+              <Link
                 key={item.id}
-                href={item.link}
+                to={item.link}
                 onClick={closeMenu}
                 className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-200 text-[15px] font-medium"
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
 
             <div className="flex flex-col gap-4 mt-6">
               <Darkmood />
-              <p className="text-[15px] font-medium">Wishlist (1)</p>
-              <p className="text-[15px] font-medium">Cart (0)</p>
-              <p className="text-[15px] font-medium">Login / Register</p>
             </div>
           </div>
         </div>
