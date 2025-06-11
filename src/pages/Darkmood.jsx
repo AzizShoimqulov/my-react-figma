@@ -4,27 +4,32 @@ import { LuSun } from "react-icons/lu";
 
 const Darkmood = () => {
   const [darkMode, setDarkMode] = useState(() => {
-    return localStorage.getItem('theme') === 'light' ? false : true;
+    // Agar localStorage'da theme saqlanmagan bo'lsa, userning brauzer preferenceni tekshiramiz
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    return savedTheme ? savedTheme === 'dark' : prefersDark;
   });
 
   useEffect(() => {
-    const root = window.document.documentElement;
-
+    const root = document.documentElement;
+    
     if (darkMode) {
-      root.classList.add("dark");
+      root.classList.add('dark');
       localStorage.setItem('theme', 'dark');
     } else {
-      root.classList.remove("dark");
+      root.classList.remove('dark');
       localStorage.setItem('theme', 'light');
     }
   }, [darkMode]);
 
   return (
     <button
-      onClick={() => setDarkMode(prev => !prev)}
-      className="p-[8px] rounded-[8px] transition-colors duration-200 hover:bg-gray-300 dark:hover:bg-[#1f2937]"
+      onClick={() => setDarkMode(!darkMode)}
+      className="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+      aria-label={darkMode ? "Light mode" : "Dark mode"}
     >
-      {darkMode ? <LuSun size={18} /> : <BsMoon size={18} />}
+      {darkMode ? <LuSun size={18} className="text-yellow-400" /> : <BsMoon size={18} />}
     </button>
   );
 };
