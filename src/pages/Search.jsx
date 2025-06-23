@@ -48,7 +48,8 @@ const Search = ({ onCategoryChange, onSearch }) => {
         </div>
       </div>
 
-      {/* FILTER PANEL */}
+      
+      
       <div
         className={`fixed inset-y-0 right-0 z-50 w-[300px] bg-white dark:bg-[#0f172a] shadow-lg transition-transform duration-450 ease-in-out ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
@@ -78,7 +79,7 @@ const Search = ({ onCategoryChange, onSearch }) => {
         </div>
       </div>
 
-      {/* BACKDROP */}
+      
       {isOpen && (
         <div
           className="fixed inset-0 bg-black/70 backdrop-blur-[3px] z-40"

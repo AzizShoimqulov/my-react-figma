@@ -4,7 +4,7 @@ import { LuSun } from "react-icons/lu";
 
 const Darkmood = () => {
   const [darkMode, setDarkMode] = useState(() => {
-    // Agar localStorage'da theme saqlanmagan bo'lsa, userning brauzer preferenceni tekshiramiz
+    
     const savedTheme = localStorage.getItem('theme');
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     

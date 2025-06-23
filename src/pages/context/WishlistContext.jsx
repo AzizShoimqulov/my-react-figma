@@ -5,7 +5,7 @@ const WishlistContext = createContext();
 export const WishlistProvider = ({ children }) => {
   const [wishlist, setWishlist] = useState([]);
 
-  // LocalStorage orqali wishlistni saqlash va yuklash
+
   useEffect(() => {
     const stored = localStorage.getItem("wishlist");
     if (stored) {

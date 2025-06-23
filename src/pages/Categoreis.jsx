@@ -4,8 +4,8 @@ import { useNavigate } from 'react-router-dom';
 const categories = [
   { title: "Electronics", key: "electronics" },
   { title: "Jewelery", key: "jewelery" },
-  { title: "Men's Clothing", key: "men's clothing" }, // OK
-  { title: "Women's Clothing", key: "women's clothing" } // OK
+  { title: "Men's Clothing", key: "men's clothing" },
+  { title: "Women's Clothing", key: "women's clothing" }
 ];
 
 

@@ -4,7 +4,7 @@ import img from '../assets/Без названия (1).jpg'
 
 const Error = () => {
   return (
-    <section className="flex flex-col items-center justify-center min-h-screen bg-[#020817] px-4 text-center">
+    <section className="flex flex-col items-center justify-center min-h-screen bg-[#020817] mt-[-50px] mb-[-35px] px-4 text-center">
       <h2 className="text-3xl md:text-4xl text-white font-bold mb-4">404 - Page Not Found</h2>
       <div className="w-32 h-1 bg-gray-300 mb-6"></div>
       <img 
